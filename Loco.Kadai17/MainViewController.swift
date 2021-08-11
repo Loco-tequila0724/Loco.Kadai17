@@ -73,7 +73,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 
-//    こちらでも問題なかったですか？？
+//    こちらでも問題なかったですか？
 //    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 //        let deleteAction = UIContextualAction(style: .destructive, title: "Delete", handler: { _, _, completionHandler in
 //            self.checkItems.remove(at: indexPath.row)
