@@ -68,16 +68,16 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            self.checkItems.remove(at: indexPath.row)
+            checkItems.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
 
-//    こちらでも問題なかったですか？
+//
 //    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//        let deleteAction = UIContextualAction(style: .destructive, title: "Delete", handler: { _, _, completionHandler in
-//            self.checkItems.remove(at: indexPath.row)
-//            tableView.deleteRows(at: [indexPath], with: .automatic)
+//        let deleteAction = UIContextualAction(style: .destructive, title: "Delete", handler: { [weak self] _, _, completionHandler in
+//            self?.checkItems.remove(at: indexPath.row)
+//            self?.tableView.deleteRows(at: [indexPath], with: .automatic)
 //            completionHandler(true)
 //        })
 //        return UISwipeActionsConfiguration(actions: [deleteAction])
